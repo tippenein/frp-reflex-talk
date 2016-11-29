@@ -1,0 +1,56 @@
+$bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
+$green: hsl(92,57%,58%);
+$black: hsl(38,54%,7%);
+$white: white;
+$gray-med: gray;
+        
+body {
+    font-size: 2em;
+    font-family: Lato,Raleway,sans-serif;
+}
+
+.tea-block {
+    display: block;
+    height: 100px;
+}
+header {
+    margin: 0 auto 0 auto;
+    position: absolute;
+}
+.green {
+    background-color: $green;
+    color: $black;
+}
+
+.white {
+    background-color: $white;
+    color: $black;
+}
+
+.black {
+    background-color: $black;
+    color: $white;
+}
+
+.button-rounded {
+  height: 40px;
+  border-radius: 100px;
+  border: none;
+  margin-bottom: 0;
+  -webkit-transition: all 250ms $bezier;
+  -moz-transition: all 250ms $bezier;
+  -ms-transition: all 250ms $bezier;
+  transition: all 250ms $bezier;
+  font-size: 18px;
+  text-transform: none;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &[disabled] {
+    color: $white;
+    background-color: $gray-med;
+    cursor: not-allowed;
+  }
+}
